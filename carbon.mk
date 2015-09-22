@@ -2,9 +2,6 @@
 TARGET_SCREEN_HEIGHT := 480
 TARGET_SCREEN_WIDTH := 320
 
-## Specify phone tech before including full_phone
-$(call inherit-product, vendor/carbon/config/telephony.mk)
-
 # Release name
 PRODUCT_RELEASE_NAME := GalaxyYoungPlus
 

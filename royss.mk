@@ -86,6 +86,11 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/royss/proprietary/system/lib/libnv.so:obj/lib/libnv.so
 
 PRODUCT_PROPERTY_OVERRIDES += \
+    lpa.decode=false \
+    lpa.use-stagefright=false \
+    lpa.releaselock=false 
+
+PRODUCT_PROPERTY_OVERRIDES += \
     ro.bluetooth.remote.autoconnect=true \
     ro.bluetooth.request.master=true \
     ro.qualcomm.bluetooth.dun=true \
@@ -104,10 +109,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dexopt-data-only=1 \
     dalvik.vm.jit.codecachesize=1 \
-    ro.config.low_ram=true
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    lpa.decode=true
+    ro.config.low_ram=false
 
 PRODUCT_PROPERTY_OVERRIDES += \
     com.qc.hardware=true \
