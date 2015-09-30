@@ -3,20 +3,20 @@ TARGET_SCREEN_HEIGHT := 480
 TARGET_SCREEN_WIDTH := 320
 
 ## Specify phone tech before including full_phone
-$(call inherit-product, vendor/cm/config/telephony.mk)
+$(call inherit-product, vendor/slim/config/telephony.mk)
 
 # Release name
 PRODUCT_RELEASE_NAME := GalaxyYoungPlus
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common Slim stuff.
+$(call inherit-product, vendor/slim/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/royss/royss.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := royss
-PRODUCT_NAME := cm_royss
+PRODUCT_NAME := slim_royss
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := GT-S6310
 PRODUCT_MANUFACTURER := samsung
