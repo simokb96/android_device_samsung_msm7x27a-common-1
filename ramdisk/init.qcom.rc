@@ -272,8 +272,8 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
 
 service gpu_dcvsd /system/bin/gpu_dcvsd
     class late_start
-    user root
-    oneshot
+    user camera
+    group camera system inet audio
 
 service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
     class late_start

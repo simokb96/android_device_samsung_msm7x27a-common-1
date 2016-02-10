@@ -181,7 +181,6 @@ enum {
 enum {
     /* OEM specific HAL formats */
     HAL_PIXEL_FORMAT_NV12_ENCODEABLE        = 0x102,
-    HAL_PIXEL_FORMAT_YCbCr_420_SP_VENUS     = 0x7FA30C04,
 #ifdef QCOM_ICS_COMPAT
     HAL_PIXEL_FORMAT_YCbCr_420_SP_TILED     = 0x108,
 #else
@@ -218,6 +217,12 @@ enum {
 
 /*****************************************************************************/
 
+#ifdef QCOM_BSP
+typedef struct {
+    int32_t paramType;
+    float   paramValue;
+} MetaData_t;
+#endif
 #ifdef __cplusplus
 struct private_handle_t : public native_handle {
 #else
@@ -247,14 +252,6 @@ struct private_handle_t : public native_handle {
             PRIV_FLAGS_EXTERNAL_BLOCK     = 0x00004000,
             // Display this buffer on external as close caption
             PRIV_FLAGS_EXTERNAL_CC        = 0x00008000,
-            PRIV_FLAGS_VIDEO_ENCODER      = 0x00010000,
-            PRIV_FLAGS_CAMERA_WRITE       = 0x00020000,
-            PRIV_FLAGS_CAMERA_READ        = 0x00040000,
-            PRIV_FLAGS_HW_COMPOSER        = 0x00080000,
-            PRIV_FLAGS_HW_TEXTURE         = 0x00100000,
-            PRIV_FLAGS_ITU_R_601          = 0x00200000,
-            PRIV_FLAGS_ITU_R_601_FR       = 0x00400000,
-            PRIV_FLAGS_ITU_R_709          = 0x00800000,
         };
 
         // file-descriptors
