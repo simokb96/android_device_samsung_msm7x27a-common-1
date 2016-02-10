@@ -39,9 +39,6 @@ on fs
     # Mount partitions
     mount_all /fstab.qcom
 
-    # zRAM
-    swapon_all /fstab.qcom
-
     setprop ro.crypto.fuse_sdcard true
 
     mount ext4 /dev/block/mmcblk0p16 /efs nosuid nodev barrier=1
@@ -121,10 +118,6 @@ on boot
     write /proc/sys/net/ipv6/conf/rmnet_sdio5/accept_ra 2
     write /proc/sys/net/ipv6/conf/rmnet_sdio6/accept_ra 2
     write /proc/sys/net/ipv6/conf/rmnet_sdio7/accept_ra 2
-
-    # zRAM
-    write /proc/sys/vm/page-cluster 0
-    write /proc/sys/vm/swappiness 70
 
     # Chown polling nodes as needed from UI running on system server
     chown system system /sys/devices/platform/msm_sdcc.1/polling
