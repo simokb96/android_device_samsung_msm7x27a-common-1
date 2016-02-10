@@ -114,10 +114,6 @@ PRODUCT_COPY_FILES += \
     device/samsung/royss/prebuilt/etc/init.qcom.sdio.sh:/system/etc/init.qcom.sdio.sh \
     device/samsung/royss/prebuilt/etc/init.qcom.wifi.sh:/system/etc/init.qcom.wifi.sh
 
-## Vold config
-PRODUCT_COPY_FILES += \
-    device/samsung/royss/prebuilt/etc/vold.fstab:system/etc/vold.fstab
-
 ## Efs
 PRODUCT_COPY_FILES += \
     device/samsung/royss/prebuilt/etc/init.qcom.efs.sync.sh:/system/etc/init.qcom.efs.sync.sh
@@ -156,6 +152,46 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/royss/prebuilt/etc/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh \
     device/samsung/royss/prebuilt/etc/init.qcom.post_fs.sh:system/etc/init.qcom.post_fs.sh
+
+## Overrides
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.gr.numframebuffers=3 \
+    debug.egl.recordable.rgba8888=1 \
+    debug.composition.type=dyn \
+    debug.hwc.dynThreshold=1.9 \
+    ro.bq.gpu_to_cpu_unsupported=1 \
+    ro.max.fling_velocity=4000 \
+    ro.opengles.version=131072 \
+    ro.sf.lcd_density=160
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dexopt-data-only=1 \
+    dalvik.vm.jit.codecachesize=1
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    com.qc.hardware=true \
+    dev.pm.dyn_sample_period=700000 \
+    dev.pm.dyn_samplingrate=1 \
+    ro.vendor.extension_library=/system/lib/libqc-opt.so
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=mtp,adb \
+    ro.vold.umsdirtyratio=50 
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.cwm.enable_key_repeat=true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.fm.analogpath.supported=true \
+    ro.fm.transmitter=false \
+    ro.fm.mulinst.recording.support=false
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    wifi.interface=wlan0 \
+    wifi.supplicant_scan_interval=60
+
+
+## Build stuff
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=2
 PRODUCT_TAGS += dalvik.gc.type-precise
 PRODUCT_AAPT_CONFIG := normal mdpi hdpi
