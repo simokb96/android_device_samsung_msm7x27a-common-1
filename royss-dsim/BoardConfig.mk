@@ -19,7 +19,7 @@
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 TARGET_KERNEL_SOURCE := kernel/samsung/msm7x27a-oc
-TARGET_KERNEL_CONFIG := cyanogenmod_royss_defconfig_nfc
+TARGET_KERNEL_CONFIG := cyanogenmod_royss_defconfig
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom
 BOARD_KERNEL_BASE := 0x00200000
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01300000

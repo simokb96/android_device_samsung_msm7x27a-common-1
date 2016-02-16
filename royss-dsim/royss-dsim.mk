@@ -60,27 +60,6 @@ PRODUCT_PACKAGES += \
     libqcomfm_jni \
     FM2
 
-## NFC
-PRODUCT_PACKAGES += \
-    libnfc \
-    libnfc_jni \
-    Nfc \
-    Tag \
-    com.android.nfc_extras
-
-## NFC permissions
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml
-
-# NFCEE access control
-ifeq ($(TARGET_BUILD_VARIANT),user)
-    NFCEE_ACCESS_PATH := device/samsung/msm7x27a-common/nfc/nfcee_access.xml
-else
-    NFCEE_ACCESS_PATH := device/samsung/msm7x27a-common/nfc/nfcee_access_debug.xml
-endif
-PRODUCT_COPY_FILES += \
-    $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
-
 # Bluetooth
 PRODUCT_PACKAGES += \
     bluetooth-headers \

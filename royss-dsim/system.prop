@@ -34,5 +34,8 @@ ro.bluetooth.request.master=true
 ro.qualcomm.bluetooth.ftp=true
 ro.qualcomm.bluetooth.sap=true
 
+# Dual Sim
+persist.radio.multisim.config=dsds
+
 # Webview
 persist.webview.provider=classic
