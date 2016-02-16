@@ -12,11 +12,11 @@ PRODUCT_RELEASE_NAME := GalaxyYoungPlus
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/royss-dsim/royss-dsim.mk)
+$(call inherit-product, device/samsung/royssnfc/royssnfc.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := royss
-PRODUCT_NAME := cm_royss
+PRODUCT_NAME := cm_royssnfc
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := GT-S6310
 PRODUCT_MANUFACTURER := samsung
