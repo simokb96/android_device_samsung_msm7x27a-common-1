@@ -7,7 +7,11 @@ system/lib/libaudiopolicy_sec.so
 #Bluetooth
 system/bin/btnvtool
 system/bin/hci_qcomm_init
+system/bin/bccmd
 system/lib/libdbus.so
+system/lib/libbluetooth.so
+system/lib/libbluetoothd.so
+system/lib/libbtio.so
 system/etc/PSConfig_7820.psr
 
 # Camera
