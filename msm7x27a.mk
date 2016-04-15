@@ -133,19 +133,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/msm7x27a-common/ramdisk/fstab.qcom:root/fstab.qcom \
     device/samsung/msm7x27a-common/ramdisk/init.qcom.bt.rc:root/init.qcom.bt.rc \
-    device/samsung/msm7x27a-common/ramdisk/init.qcom.class_main.sh:root/init.qcom.class_main.sh \
     device/samsung/msm7x27a-common/ramdisk/init.qcom.rc:root/init.qcom.rc \
-    device/samsung/msm7x27a-common/ramdisk/init.qcom.ril.path.sh:root/init.qcom.ril.path.sh \
     device/samsung/msm7x27a-common/ramdisk/init.qcom.usb.rc:root/init.qcom.usb.rc \
     device/samsung/msm7x27a-common/ramdisk/lpm.rc:root/lpm.rc \
     device/samsung/msm7x27a-common/ramdisk/ueventd.qcom.rc:root/ueventd.qcom.rc
-
-## Bluetooth files
-PRODUCT_COPY_FILES += \
-    device/samsung/msm7x27a-common/prebuilt/bluetooth/init.bt.sh:system/etc/init.bt.sh \
-    device/samsung/msm7x27a-common/prebuilt/bluetooth/libbt-aptx.so:system/lib/libbt-aptx.so \
-    device/samsung/msm7x27a-common/prebuilt/bluetooth/libbt-codec.so:system/lib/libbt-codec.so \
-    device/samsung/msm7x27a-common/prebuilt/bluetooth/libbt-codec_aptx.so:system/lib/libbt-codec_aptx.so
 
 ## Misc files
 PRODUCT_COPY_FILES += \
