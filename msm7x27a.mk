@@ -131,7 +131,6 @@ PRODUCT_COPY_FILES += \
 
 ## Init files
 PRODUCT_COPY_FILES += \
-    device/samsung/msm7x27a-common/ramdisk/fstab.qcom:root/fstab.qcom \
     device/samsung/msm7x27a-common/ramdisk/init.qcom.bt.rc:root/init.qcom.bt.rc \
     device/samsung/msm7x27a-common/ramdisk/init.qcom.rc:root/init.qcom.rc \
     device/samsung/msm7x27a-common/ramdisk/init.qcom.usb.rc:root/init.qcom.usb.rc \
@@ -180,8 +179,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwc.dynThreshold=1.9 \
     ro.bq.gpu_to_cpu_unsupported=1 \
     ro.max.fling_velocity=4000 \
-    ro.opengles.version=131072 \
-    ro.sf.lcd_density=160
+    ro.opengles.version=131072
 
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dexopt-data-only=1 \
